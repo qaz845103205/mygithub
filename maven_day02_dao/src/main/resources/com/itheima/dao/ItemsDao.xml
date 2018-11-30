@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+<mapper namespace="com.itheima.dao.ItemsDao">
+    <select id="findById" parameterType="int" resultType="items">
+        select * from items where id = #{id}
+    </select>
+</mapper>-->
+
+
+<mapper namespace="com.itheima.dao.ItemsDao">
+    <select id="findById" parameterType="int" resultType="items">/*记住 ，resultmap要写对应的javabean和实体类对应的关系*/
+        SELECT * from items where id=#{id}
+    </select>
+</mapper>
